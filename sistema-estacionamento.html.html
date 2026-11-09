@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Controle de Estacionamento</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Controle de Estacionamento</h1>
+    <nav>
+      <button type="button" onclick="mostrarTela('vagas')">Listar vagas</button>
+      <button type="button" onclick="mostrarTela('cadastro')">Cadastrar reserva</button>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Tela 1: listagem e vagas livres -->
+    <section id="tela-vagas">
+      <h2>Vagas do condomínio</h2>
+      <p>O estacionamento possui 10 vagas, numeradas de 1 a 10.</p>
+
+      <h3>Vagas disponíveis</h3>
+      <p id="vagas-disponiveis"></p>
+
+      <h3>Reservas cadastradas</h3>
+      <div class="tabela-container">
+        <table>
+          <thead>
+            <tr>
+              <th>Vaga</th>
+              <th>Placa</th>
+              <th>Proprietário</th>
+              <th>Apartamento</th>
+              <th>Bloco</th>
+              <th>Modelo</th>
+              <th>Cor</th>
+              <th>Ação</th>
+            </tr>
+          </thead>
+          <tbody id="lista-reservas"></tbody>
+        </table>
+      </div>
+      <p id="mensagem-lista"></p>
+    </section>
+
+    <!-- Tela 2: cadastro, dentro do mesmo sistema -->
+    <section id="tela-cadastro" class="escondido">
+      <h2>Cadastro de reserva</h2>
+      <p>Preencha os dados do veículo para reservar uma vaga.</p>
+
+      <form id="formulario">
+        <label for="placa">Placa do veículo</label>
+        <input id="placa" type="text" maxlength="7" placeholder="ABC1D23" required>
+
+        <label for="proprietario">Nome do proprietário</label>
+        <input id="proprietario" type="text" required>
+
+        <label for="apartamento">Número do apartamento</label>
+        <input id="apartamento" type="text" required>
+
+        <label for="bloco">Bloco do apartamento</label>
+        <input id="bloco" type="text" required>
+
+        <label for="modelo">Modelo do veículo</label>
+        <input id="modelo" type="text" required>
+
+        <label for="cor">Cor do veículo</label>
+        <input id="cor" type="text" required>
+
+        <label for="vaga">Número da vaga (1 a 10)</label>
+        <input id="vaga" type="number" min="1" max="10" required>
+
+        <button type="submit">Salvar reserva</button>
+      </form>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

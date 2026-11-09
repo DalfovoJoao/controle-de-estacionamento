@@ -1,0 +1,92 @@
+/* CSS simples para as duas telas do sistema */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  background-color: #f2f2f2;
+  color: #222;
+}
+
+header {
+  background-color: #24527a;
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+
+nav button {
+  background-color: white;
+  color: #24527a;
+  margin: 5px;
+}
+
+main {
+  background-color: white;
+  max-width: 850px;
+  margin: 25px auto;
+  padding: 20px;
+  border: 1px solid #ddd;
+}
+
+.escondido {
+  display: none;
+}
+
+form {
+  max-width: 450px;
+}
+
+label {
+  display: block;
+  margin-top: 12px;
+  margin-bottom: 5px;
+}
+
+input {
+  width: 100%;
+  padding: 9px;
+  box-sizing: border-box;
+  border: 1px solid #aaa;
+  border-radius: 4px;
+}
+
+button {
+  background-color: #24527a;
+  color: white;
+  border: none;
+  padding: 10px 14px;
+  margin-top: 15px;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+button:hover {
+  opacity: 0.85;
+}
+
+.tabela-container {
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th, td {
+  border: 1px solid #ccc;
+  padding: 8px;
+  text-align: left;
+}
+
+th {
+  background-color: #e8eef4;
+}
+
+.botao-remover {
+  background-color: #ad3838;
+  margin-top: 0;
+}
+
+@media (max-width: 900px) {
+  main { margin: 15px; }
+}
