@@ -25,14 +25,14 @@ Sistema simples de controle de vagas de estacionamento de um condomínio, feito 
 
 1. Baixe os arquivos deste repositório (botão **Code > Download ZIP**).
 2. Extraia os arquivos na mesma pasta.
-3. Abra o arquivo `sistema-estacionamento.html.html` em um navegador.
+3. Abra o arquivo `index.html` em um navegador.
 4. Use os botões **Listar vagas** e **Cadastrar reserva** para navegar no sistema.
 
 Não é necessário instalar bibliotecas nem configurar um servidor.
 
 ## Organização dos arquivos
 
-- `sistema-estacionamento.html.html`: estrutura das telas.
+- `index.html`: estrutura das telas.
 - `css-estacionamento.css`: aparência do sistema.
 - `javascript-estacionamento-.js`: cadastro, listagem, remoção e armazenamento das reservas.
 
