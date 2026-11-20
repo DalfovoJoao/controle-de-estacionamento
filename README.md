@@ -1,45 +1,52 @@
-# Controle de Estacionamento 🚗
+# Parking Management System 🚗
 
-Projeto acadêmico desenvolvido durante o curso de Análise e Desenvolvimento de Sistemas (ADS).
+A simple web application created as an academic project during my **Systems Analysis and Development** studies.
 
-## Sobre o projeto
+## About
 
-Sistema simples de controle de vagas de estacionamento de um condomínio, feito com HTML, CSS e JavaScript. O estacionamento possui **10 vagas**.
+This project manages reservations for a condominium parking lot with 10 numbered parking spaces.
 
-## Funcionalidades
+## Features
 
-- Visualizar quais vagas estão disponíveis.
-- Cadastrar reservas com informações do veículo e do proprietário.
-- Impedir a reserva de uma vaga que já está ocupada.
-- Listar as reservas cadastradas.
-- Remover reservas.
-- Guardar os dados no `localStorage` do navegador.
+- View available parking spaces.
+- Register vehicle reservations and owner information.
+- Prevent two vehicles from reserving the same space.
+- View and remove existing reservations.
+- Store reservations locally in the browser using `localStorage`.
+- Display a simple English interface.
 
-## Tecnologias utilizadas
+## Technologies
 
 - HTML5
 - CSS3
 - JavaScript
 
-## Como executar
+## Getting started
 
-1. Baixe os arquivos deste repositório (botão **Code > Download ZIP**).
-2. Extraia os arquivos na mesma pasta.
-3. Abra o arquivo `index.html` em um navegador.
-4. Use os botões **Listar vagas** e **Cadastrar reserva** para navegar no sistema.
+1. Select **Code > Download ZIP** and extract the repository.
+2. Open `index.html` in a web browser.
+3. Select **View parking spaces** to see availability or **Register a reservation** to add a vehicle.
 
-Não é necessário instalar bibliotecas nem configurar um servidor.
+No additional libraries or server setup are required.
 
-## Organização dos arquivos
+## Project structure
 
-- `index.html`: estrutura das telas.
-- `css-estacionamento.css`: aparência do sistema.
-- `javascript-estacionamento-.js`: cadastro, listagem, remoção e armazenamento das reservas.
+```text
+parking-management/
+├── index.html
+├── style.css
+├── script.js
+└── README.md
+```
 
-## O que aprendi
+## What I learned
 
-Neste projeto, pratiquei a criação de formulários e tabelas em HTML, estilização com CSS, manipulação de elementos da página com JavaScript, eventos e armazenamento local.
+- Building forms and tables with HTML.
+- Styling pages with CSS.
+- DOM manipulation and event handling with JavaScript.
+- Using browser storage to keep data between visits.
+- Checking inputs and preventing duplicate reservations.
 
-## Observação
+## Notes
 
-Os dados ficam salvos somente no navegador utilizado. Este projeto não possui banco de dados nem autenticação; é uma atividade de aprendizado.
+This is a learning project rather than a production parking service. Reservations are kept only in the local browser, not in a shared database. The updated script can read reservations stored by the earlier Portuguese version.
