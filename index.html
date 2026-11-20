@@ -1,82 +1,80 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Controle de Estacionamento</title>
-  <link rel="stylesheet" href="css-estacionamento.css">
+  <title>Parking Management System</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <header>
-    <h1>Controle de Estacionamento</h1>
+    <h1>Parking Management System</h1>
     <nav>
-      <button type="button" onclick="mostrarTela('vagas')">Listar vagas</button>
-      <button type="button" onclick="mostrarTela('cadastro')">Cadastrar reserva</button>
+      <button type="button" onclick="showScreen('spaces')">View parking spaces</button>
+      <button type="button" onclick="showScreen('registration')">Register a reservation</button>
     </nav>
   </header>
 
   <main>
-    <!-- Tela 1: listagem e vagas livres -->
-    <section id="tela-vagas">
-      <h2>Vagas do condomínio</h2>
-      <p>O estacionamento possui 10 vagas, numeradas de 1 a 10.</p>
+    <section id="screen-spaces">
+      <h2>Condominium Parking Spaces</h2>
+      <p>The parking lot has 10 spaces, numbered from 1 to 10.</p>
 
-      <h3>Vagas disponíveis</h3>
-      <p id="vagas-disponiveis"></p>
+      <h3>Available spaces</h3>
+      <p id="available-spaces"></p>
 
-      <h3>Reservas cadastradas</h3>
-      <div class="tabela-container">
+      <h3>Registered reservations</h3>
+      <div class="table-container">
         <table>
           <thead>
             <tr>
-              <th>Vaga</th>
-              <th>Placa</th>
-              <th>Proprietário</th>
-              <th>Apartamento</th>
-              <th>Bloco</th>
-              <th>Modelo</th>
-              <th>Cor</th>
-              <th>Ação</th>
+              <th>Space</th>
+              <th>License plate</th>
+              <th>Owner</th>
+              <th>Apartment</th>
+              <th>Building</th>
+              <th>Vehicle model</th>
+              <th>Color</th>
+              <th>Action</th>
             </tr>
           </thead>
-          <tbody id="lista-reservas"></tbody>
+          <tbody id="reservation-list"></tbody>
         </table>
       </div>
-      <p id="mensagem-lista"></p>
+      <p id="list-message"></p>
     </section>
 
-    <!-- Tela 2: cadastro, dentro do mesmo sistema -->
-    <section id="tela-cadastro" class="escondido">
-      <h2>Cadastro de reserva</h2>
-      <p>Preencha os dados do veículo para reservar uma vaga.</p>
+    <section id="screen-registration" class="hidden">
+      <h2>Register a reservation</h2>
+      <p>Enter the vehicle information to reserve a space.</p>
 
-      <form id="formulario">
-        <label for="placa">Placa do veículo</label>
-        <input id="placa" type="text" maxlength="7" placeholder="ABC1D23" required>
+      <form id="reservation-form">
+        <label for="license-plate">License plate</label>
+        <input id="license-plate" type="text" maxlength="7" placeholder="ABC1D23" required>
 
-        <label for="proprietario">Nome do proprietário</label>
-        <input id="proprietario" type="text" required>
+        <label for="owner">Owner's name</label>
+        <input id="owner" type="text" required>
 
-        <label for="apartamento">Número do apartamento</label>
-        <input id="apartamento" type="text" required>
+        <label for="apartment">Apartment number</label>
+        <input id="apartment" type="text" required>
 
-        <label for="bloco">Bloco do apartamento</label>
-        <input id="bloco" type="text" required>
+        <label for="building">Building</label>
+        <input id="building" type="text" required>
 
-        <label for="modelo">Modelo do veículo</label>
-        <input id="modelo" type="text" required>
+        <label for="model">Vehicle model</label>
+        <input id="model" type="text" required>
 
-        <label for="cor">Cor do veículo</label>
-        <input id="cor" type="text" required>
+        <label for="color">Vehicle color</label>
+        <input id="color" type="text" required>
 
-        <label for="vaga">Número da vaga (1 a 10)</label>
-        <input id="vaga" type="number" min="1" max="10" required>
+        <label for="space">Parking space (1 to 10)</label>
+        <input id="space" type="number" min="1" max="10" required>
 
-        <button type="submit">Salvar reserva</button>
+        <button type="submit">Save reservation</button>
       </form>
     </section>
   </main>
 
-  <script src="javascript-estacionamento-.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
